@@ -5,34 +5,63 @@ Arduino based railroad crossing replica
 
 With the coronavirus sending students home for the rest of the semester (spring 2020), I found myself with a lot of extra time on my hands and lots of parts that I have never used.I recalled that the theme for this years VBS at my church is a railroad theme and my idea was born. I decided that I was going to make a railroad crossing signal. You know the ones with the moving arm, sound and blinking lights. It seemed a little easy especially since I am a junior electrical engineering student so I set off to work, needless to say, I encountered many errors and problems that made this a not an “easy” project. Certainly not a “plug and go” anyway lets get started.
 
+
 Step 1: Gather materials. 
+
 3x Arduino UNOs - $23/ea (arduino.cc)
+
 2x microswitches - $2/ea* (microcenter)
+
 2x pushbuttons - $0.10/ea (digikey)
+
 2x 8Ohm-1W speakers - $2.95/ea (microcenter)
+
 1x adafruit sound effects board $30/ea (adafruit)
+
 2x neopixel ring (16LEDs)
+
 1x barrel jack
+
 1x 5V 3A power supply
+
 2x 10K ohm resistors
+
 Jumper wire
+
 1x 10 ft carpet tude
+
 1x 6ft pool noodle
+
 1x 6ft PVC pipe ½” diameter
+
 2x empty paint can
+
 Black paint
+
 Grey paint
+
 Red paint
+
 White paint
+
 2x 2”x1/4” x3’ pieces of wood
+
 2x MOSFET N-ch 30V transistor
+
 2x MOSFET P-ch 27A transistor
+
 1x 555 timer
+
 1x 125V 3A fuse
+
 2x 10000pf ceramic capacitor
+
 2x 1n4004 diode
+
 1x 19rpm economy brush pur motor
+
 1x 4mm shaft mount 32 pitch 16T gear
+
 1x 32 pitch 64T 1” bore gear
 
 Estimated total cost:
