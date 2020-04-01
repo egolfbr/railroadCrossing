@@ -2,11 +2,8 @@
 Arduino based railroad crossing replica 
 
 
-	
-Description:  This document will cover the steps and thought processes I went through to complete this project. Overall this has taken about 12hrs to complete. 
 
-Introduction
-	With the coronavirus sending students home for the rest of the semester (spring 2020), I found myself with a lot of extra time on my hands and lots of parts that I have never used.I recalled that the theme for this years VBS at my church is a railroad theme and my idea was born. I decided that I was going to make a railroad crossing signal. You know the ones with the moving arm, sound and blinking lights. It seemed a little easy especially since I am a junior electrical engineering student so I set off to work, needless to say, I encountered many errors and problems that made this a not an “easy” project. Certainly not a “plug and go” anyway lets get started.
+With the coronavirus sending students home for the rest of the semester (spring 2020), I found myself with a lot of extra time on my hands and lots of parts that I have never used.I recalled that the theme for this years VBS at my church is a railroad theme and my idea was born. I decided that I was going to make a railroad crossing signal. You know the ones with the moving arm, sound and blinking lights. It seemed a little easy especially since I am a junior electrical engineering student so I set off to work, needless to say, I encountered many errors and problems that made this a not an “easy” project. Certainly not a “plug and go” anyway lets get started.
 
 Step 1: Gather materials. 
 3x Arduino UNOs - $23/ea (arduino.cc)
