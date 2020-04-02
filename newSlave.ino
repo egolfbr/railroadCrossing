@@ -15,7 +15,7 @@
 */
 
 
-//slave
+//slave 1. This device controls the motor power, motor direction and the sound.
 #include <Wire.h>
 
 int motorPin = 9;
