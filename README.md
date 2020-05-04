@@ -96,6 +96,7 @@ Step 3: Code the Arduino’s
 
 State Diagram:
 
+![State diagram](pictures/pictures/stateMachine.png)
 
 The state diagram helps visualize what is supposed to happen. This helps when errors occur etc.  
 	A key note that I found out debugging my code is that the break statements are very important when using switch statements. Without these the code won’t run properly. I tried to do some basic research on the switch statements because I had used switch statements before but I had not looked into why we use breaks. What I came up with was that breaks basically prevent the code from running the following case.
