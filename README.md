@@ -55,7 +55,7 @@ For the motor I just used the sound arduino because the sound doesn’t take a l
 
 ![This is the controller that controls the sensors and inputs](pictures/pictures/controller.jpg)
 
-![This is the LED circuit](pictures/pictures/LEDs.jpg)
+![This is the LED circuit](pictures/pictures/LEDs.jpg =100x100)
 
 ![This is the audio for the circuit, I used an adafruit audio board](pictures/pictures/audio.jpg)
 
