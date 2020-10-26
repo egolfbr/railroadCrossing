@@ -49,15 +49,15 @@ Okay so I grabbed a new arduino so that I could put a dedicated LED flashing cod
 For the sound arduino I used the Adafruit sound effects board and some low powered speakers. This was the plug and go part of the project. There is a tutorial on how to use this board on Adafruit’s website which I will post a link to. The sound file is a simple MP3 that I downloaded for free (link below). You don’t have to include a sound portion to this project as it does get rather annoying but I always enjoy sound effects.
 For the motor I just used the sound arduino because the sound doesn’t take a lot of time because it is just toggling a pin high and low. I used an attached link for the build of a custom H-bridge motor driver with variable speed and direction. The attached link had 95% of the circuit already designed so that was very helpful. The only portion that I personally designed and built was making it “programmable.” This means that instead of using a physical switch to change direction and to power the motor on and off, I used signals from the arduino dedicated to that function. The main issue is that I needed a SPDT switch that doesn’t require human interaction. Again, limited by supplies I landed on a 5V relay. A relay can be used similar to a 2n2222 transistor in that it can control higher voltage and amperage signals with a common 5V or 3.3V signal depending on the relay. In this case I didn’t need it to control a high voltage or current, just the fact that I needed it to be programmable. So the relay portion of the circuit controls the direction because for an H-bridge, if one side is connected to the power supply, and the other side is at ground, then the motor spins one way and if you switch those signals then you can make it spin the other way. To control the status of the motor (whether it is on or off) I simply used another N-Channel MOSFET transistor. Below are some images of the full circuit. First is the full motor dirver all wired up with a PWM signal and Hbridge, then just the PWM signal generator (555 timer circuit), then the master controller which takes inputs from sensors and buttons, the LED circuit which is just some neoPixel Rings, and finally, the audio circuit. I used an Adafruit sound effects board to shorten the project and bring the complexity down a bit.
 
-![This is the image for the complete Motor Driver](pictures/pictures/fullMotorDriver.jpg =100x100)
+![This is the image for the complete Motor Driver](pictures/pictures/fullMotorDriver.jpg){height=100px width=100px}
 
-![This is the image of the PWM signal generator](pictures/pictures/PWM.jpg =100x100)
+![This is the image of the PWM signal generator](pictures/pictures/PWM.jpg){height=100px width=100px}
 
-![This is the controller that controls the sensors and inputs](pictures/pictures/controller.jpg =100x100)
+![This is the controller that controls the sensors and inputs](pictures/pictures/controller.jpg){height=100px width=100px}
 
-![This is the LED circuit](pictures/pictures/LEDs.jpg =100x100)
+![This is the LED circuit](pictures/pictures/LEDs.jpg){height=100px width=100px}
 
-![This is the audio for the circuit, I used an adafruit audio board](pictures/pictures/audio.jpg =100x100)
+![This is the audio for the circuit, I used an adafruit audio board](pictures/pictures/audio.jpg){height=100px width=100px}
 
 ## Programming
 Step 3: Code the Arduino’s
@@ -65,7 +65,7 @@ Step 3: Code the Arduino’s
 
 State Diagram:
 
-![State diagram](pictures/pictures/stateMachine.png =100x100)
+![State diagram](pictures/pictures/stateMachine.png){height=100px width=100px}
 
 The state diagram helps visualize what is supposed to happen. This helps when errors occur etc.  
 A key note that I found out debugging my code is that the break statements are very important when using switch statements. Without these the code won’t run properly. I tried to do some basic research on the switch statements because I had used switch statements before but I had not looked into why we use breaks. What I came up with was that breaks basically prevent the code from running the following case.
