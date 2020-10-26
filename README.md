@@ -51,13 +51,23 @@ For the motor I just used the sound arduino because the sound doesn’t take a l
 <p align="center">
 	<img height="300" src="pictures/pictures/fullMotorDriver.jpg"
 </p>
-![This is the image of the PWM signal generator](pictures/pictures/PWM.jpg){height=50px width=100px}
+	
+<p align="center">
+	<img height="300" src="pictures/pictures/PWM.jpg"
+</p>	
 
-![This is the controller that controls the sensors and inputs](pictures/pictures/controller.jpg){height=50px width=100px}
+<p align="center">
+	<img height="300" src="pictures/pictures/controller.jpg"
+</p>	
 
-![This is the LED circuit](pictures/pictures/LEDs.jpg){height=50px width=100px}
+<p align="center">
+	<img height="300" src="pictures/pictures/LEDs.jpg"
+</p>	
 
-![This is the audio for the circuit, I used an adafruit audio board](pictures/pictures/audio.jpg){height=50px width=100px}
+<p align="center">
+	<img height="300" src="pictures/pictures/audio.jpg"
+</p>
+
 
 ## Programming
 Step 3: Code the Arduino’s
@@ -65,7 +75,9 @@ Step 3: Code the Arduino’s
 
 State Diagram:
 
-![State diagram](pictures/pictures/stateMachine.png){height=50px width=100px}
+<p align="center">
+	<img height="300" src="pictures/pictures/stateMachine.png"
+</p>
 
 The state diagram helps visualize what is supposed to happen. This helps when errors occur etc.  
 A key note that I found out debugging my code is that the break statements are very important when using switch statements. Without these the code won’t run properly. I tried to do some basic research on the switch statements because I had used switch statements before but I had not looked into why we use breaks. What I came up with was that breaks basically prevent the code from running the following case.
