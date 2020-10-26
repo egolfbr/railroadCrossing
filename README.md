@@ -1,41 +1,32 @@
-# railroadCrossing
+# RailRoadCrossing
 Arduino based railroad crossing replica 
+## Table of Contents
+## Table of Contents
+**[Introduction](#Introduction)**<br>
+**[Gather Materials](#Gather-Matierals)**<br>
+**[Building](#Building)**<br>
+**[Programming](#Programming)**<br>
+**[Conclusion](#Conclusion)**<br>
 
-
-
+## Introduction
 With the coronavirus sending students home for the rest of the semester (spring 2020), I found myself with a lot of extra time on my hands and lots of parts that I have never used.I recalled that the theme for this years VBS at my church is a railroad theme and my idea was born. I decided that I was going to make a railroad crossing signal. You know the ones with the moving arm, sound and blinking lights. It seemed a little easy especially since I am a junior electrical engineering student so I set off to work, needless to say, I encountered many errors and problems that made this a not an “easy” project. Certainly not a “plug and go” anyway lets get started.
 
-
+## Gather Materials
 Step 1: Gather materials. 
-
 * 3x Arduino UNOs - $23/ea (arduino.cc)
-
 * 2x microswitches - $2/ea* (microcenter)
-
 * 2x pushbuttons - $0.10/ea (digikey)
-
 * 2x 8Ohm-1W speakers - $2.95/ea (microcenter)
-
 * 1x adafruit sound effects board $30/ea (adafruit)
-
 * 2x neopixel ring (16LEDs)
-
 * 1x barrel jack
-
 * 1x 5V 3A power supply
-
 * 2x 10K ohm resistors
-
 * Jumper wire
-
 * 2x MOSFET N-ch 30V transistor
-
 * 2x MOSFET P-ch 27A transistor
-
 * 1x 555 timer
-
 * 1x 125V 3A fuse
-
 * 2x 10000pf ceramic capacitor
 * 2x 1n4004 diode
 * 1x 19rpm economy brush pur motor
@@ -48,7 +39,7 @@ Estimated total cost:
 
 
 You may be wondering why I use so many microcontrollers for a relatively simple process. I was limited by 2 main factors in this build, materials that I had, and money. Now, using 3 micro controllers seems like a costly thing to do and it is. However, I was lucky enough to receive a donation of parts last year which included about 10 arduinos. So having these extra controllers was a huge relief because it allowed me to make this project more parallel. In other words, I have multiple processes running at the same time across multiple devices. I will get into this more as I explain the circuit in the next section, but as some of you may guess, running certain processes takes time and if I want to say blink LEDs and move a motor at the same time, there will be a delay in the circuit. I may make a video example of what I am talking about for those who are confused. 
-
+## Building 
 Step 2: build the circuit.
 	The most important thing to remember here is to CONNECT ALL GROUND PINS. Also pin numbers are arbitrary. There is no specific reason I choose any of the digital IO pins. The SDA and SCL pins however must remain on A4 and A5 respectively. There are other places to connect these pins on other versions of the arduino UNO but I like to use these pins because they are universal on the UNO models. 
 	Additionally, due to my lack of knowledge in EAGLE I will attach hand drawn circuit schematics for parts of the circuit that parts aren’t readily available for on EAGLE so that you have them and I will work on updating the EAGLE file so that there is one complete schematic file that can be downloaded. On the hand-drawn circuits, any node names that are the same on the EAGLE file are connected. For example, on the board labeled SOUND, there is a pin labeled SOUNDPIN. On the hand-drawn schematic there is also a SOUNDPIN, that means that those nodes are connected. Also there is a portion of the circuit that is simplified. For the neopixel rings I only included 2xsingle LED schematics. In reality each of those single LEDs is a whole 16 LED ring. Connections are the same though because you are connecting the last LED on the first ring with the first LED on the second ring.
@@ -68,7 +59,7 @@ For the motor I just used the sound arduino because the sound doesn’t take a l
 
 ![This is the audio for the circuit, I used an adafruit audio board](pictures/pictures/audio.jpg)
 
-
+## Programming
 Step 3: Code the Arduino’s
 	For this project I implemented a state machine. This is just so that it is easier to organize on paper, in the code and in my head. Basically a state machine is a machine whose outputs are decided by which state it is in and the state is decided by the inputs. That is just a very general description. State machines are all around us from traffic lights to elevators, so it is very useful to get to know how to program one and how they work. Typically, these are implemented with an FPGA but they can really be implemented with anything. My code is heavily commented so I don’t anticipate this to be a long section. 
 
@@ -77,10 +68,11 @@ State Diagram:
 ![State diagram](pictures/pictures/stateMachine.png)
 
 The state diagram helps visualize what is supposed to happen. This helps when errors occur etc.  
-	A key note that I found out debugging my code is that the break statements are very important when using switch statements. Without these the code won’t run properly. I tried to do some basic research on the switch statements because I had used switch statements before but I had not looked into why we use breaks. What I came up with was that breaks basically prevent the code from running the following case.
+A key note that I found out debugging my code is that the break statements are very important when using switch statements. Without these the code won’t run properly. I tried to do some basic research on the switch statements because I had used switch statements before but I had not looked into why we use breaks. What I came up with was that breaks basically prevent the code from running the following case.
 
-Conclusion:
-	Overall this project took me about 12 hours to complete. I worked for about 2-3 hrs every couple days or so for about 3 weeks. However, if you had all the parts I imagine that this would take maybe an afternoon or two. The main thing that slowed me down were simple software errors mainly. The hardware was rather simple once I got the parts. There were a few instances where I had to improvise and come up with some of my own stuff (see motor power and motor direction without buttons) but again most of the information was already available I just had to synthesize it in a certain way. If I were to do this again  I would try to implement this with an FPGA and more hardware solutions like the 555 timer circuit for the LEDs. I would like to print PCBs for this project to make it more professional as well. Furthermore I would like to see if there is a way to use less arduinos. The one thing that I will probably actually do as an extension is that I will add another arduino or raspberry pi to read telemetry data from the circuit and based on that master data determine if it is necessary to shut the circuit off. I already need to wire battery packs to all the arduinos to a master switch to turn them all on  at the same time and having that switch or another controlled via microcontroller shouldn’t be too hard. I will also add a screen to display current information relevant to the well being of the circuit. 
+## Conclusion
+
+Overall this project took me about 12 hours to complete. I worked for about 2-3 hrs every couple days or so for about 3 weeks. However, if you had all the parts I imagine that this would take maybe an afternoon or two. The main thing that slowed me down were simple software errors mainly. The hardware was rather simple once I got the parts. There were a few instances where I had to improvise and come up with some of my own stuff (see motor power and motor direction without buttons) but again most of the information was already available I just had to synthesize it in a certain way. If I were to do this again  I would try to implement this with an FPGA and more hardware solutions like the 555 timer circuit for the LEDs. I would like to print PCBs for this project to make it more professional as well. Furthermore I would like to see if there is a way to use less arduinos. The one thing that I will probably actually do as an extension is that I will add another arduino or raspberry pi to read telemetry data from the circuit and based on that master data determine if it is necessary to shut the circuit off. I already need to wire battery packs to all the arduinos to a master switch to turn them all on  at the same time and having that switch or another controlled via microcontroller shouldn’t be too hard. I will also add a screen to display current information relevant to the well being of the circuit. 
 	
 video link: https://youtu.be/l8aVLoQLqr0
 
