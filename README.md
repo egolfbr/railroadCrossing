@@ -8,61 +8,39 @@ With the coronavirus sending students home for the rest of the semester (spring 
 
 Step 1: Gather materials. 
 
-3x Arduino UNOs - $23/ea (arduino.cc)
+* 3x Arduino UNOs - $23/ea (arduino.cc)
 
-2x microswitches - $2/ea* (microcenter)
+* 2x microswitches - $2/ea* (microcenter)
 
-2x pushbuttons - $0.10/ea (digikey)
+* 2x pushbuttons - $0.10/ea (digikey)
 
-2x 8Ohm-1W speakers - $2.95/ea (microcenter)
+* 2x 8Ohm-1W speakers - $2.95/ea (microcenter)
 
-1x adafruit sound effects board $30/ea (adafruit)
+* 1x adafruit sound effects board $30/ea (adafruit)
 
-2x neopixel ring (16LEDs)
+* 2x neopixel ring (16LEDs)
 
-1x barrel jack
+* 1x barrel jack
 
-1x 5V 3A power supply
+* 1x 5V 3A power supply
 
-2x 10K ohm resistors
+* 2x 10K ohm resistors
 
-Jumper wire
+* Jumper wire
 
-1x 10 ft carpet tude
+* 2x MOSFET N-ch 30V transistor
 
-1x 6ft pool noodle
+* 2x MOSFET P-ch 27A transistor
 
-1x 6ft PVC pipe ½” diameter
+* 1x 555 timer
 
-2x empty paint can
+* 1x 125V 3A fuse
 
-Black paint
-
-Grey paint
-
-Red paint
-
-White paint
-
-2x 2”x1/4” x3’ pieces of wood
-
-2x MOSFET N-ch 30V transistor
-
-2x MOSFET P-ch 27A transistor
-
-1x 555 timer
-
-1x 125V 3A fuse
-
-2x 10000pf ceramic capacitor
-
-2x 1n4004 diode
-
-1x 19rpm economy brush pur motor
-
-1x 4mm shaft mount 32 pitch 16T gear
-
-1x 32 pitch 64T 1” bore gear
+* 2x 10000pf ceramic capacitor
+* 2x 1n4004 diode
+* 1x 19rpm economy brush pur motor
+* 1x 4mm shaft mount 32 pitch 16T gear
+* 1x 32 pitch 64T 1” bore gear
 
 Estimated total cost:
 	For those who do not have any previous material the estimated total cost is about $276. This does not include shipping and tax as you will most likely end up ordering from multiple different places. Websites such as Amazon may make it cheaper. I ended up spending just under $100 on parts that I didn’t have. PCB ordering is also not factored into this cost. I usually order PCBs from China. This means that I have to order a minimum of 10 boards per design. Thus with SeedStudio, I will have to pay around $5 for each design as well as shipping and tax for each one. I also included what the cost would be had I been contracted by a client to build this device. I used a simple google search of the median income of an electrical engineer to base my calculation for the per hour pay. 
